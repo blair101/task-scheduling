@@ -58,7 +58,7 @@ drwxr-xr-x   8 blair  staff   256B Dec 15 14:04 util
 
 + script目录 主要存放 shell 脚本，有需要也存放 python 脚本
 + java 代码需要放入 java目录 
-+ 如果该模块，script目录脚本较多，􏰀可以在 script dir之下建立子目录􏰀如􏰂 :
++ 如果该模块，script目录脚本较多，可以在 script dir之下建立子目录:
 
         ├── script
           ├── sub_module_1 子模块目录 
@@ -85,9 +85,9 @@ drwxr-xr-x   8 blair  staff   256B Dec 15 14:04 util
 + 2). 配置文件 (conf目录下)
 
    ```
-   default.conf􏰂 配置公共参数􏰂程序路径􏰄hadoop 用户等􏰁
-   vars.conf    配置任务参数􏰂 hive表名􏰄参数设置, 以及其他变量等􏰁
-   alert.conf􏰂   配置邮件报警接收人􏰁 
+   default.conf􏰂 配置公共参数, 程序路径, hadoop 用户等
+   vars.conf    配置任务参数, hive表名, 参数设置, 以及其他变量等
+   alert.conf􏰂   配置邮件报警接收人
 ```
         
 + 3). 输入输出

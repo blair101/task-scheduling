@@ -171,7 +171,7 @@ total 144
 - 编写 crontab_job 下你的调度脚本
 - 仿照 crontab\_job\_ods\_e\_coupon.sh 编写你主脚本对应的 调度脚本
 
-### 3.6 Linux crontab Or Airflow
+### 3.6 Linux crontab or Airflow
 
 在 linux crontab 中，增加需要定时启动的你的调度脚本 crontab\_job\_your\_script.sh
 

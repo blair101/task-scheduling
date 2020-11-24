@@ -1,9 +1,5 @@
 # Flexible Task Scheduling Microframework
 
-Date | version | Author 
---- | --- | --- 
-2018-11-25 | 4.0 | Blair Chan 
-
 ## 目标
 
 + 1. 提供一些 best practice

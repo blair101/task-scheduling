@@ -66,17 +66,17 @@ drwxr-xr-x   8 blair  staff   256B Dec 15 14:04 util
           
 ### 2.2 项目模板 
 
-+ 提供公共的项目模板. 􏰀统一shell脚本代码􏰄结构􏰄 日志􏰄配置规范􏰁 等
-+ 项目模板可仿照本模块􏰂 : 
++ 提供公共的项目模板. 统一shell脚本代码, 结构, 日志配置规范 等
++ 项目模板可仿照本模块 : 
 
 ```
     http://gitlab.***/data/bigdata-offline-demo.git
 ```
     
-+ 1). 变量命名􏰂
++ 1). 变量命名
 
 ```
-   自有变量采用小写􏰀. export出的环境变量采用大写􏰁
+   自有变量采用小写. export出的环境变量采用大写
      hive 表命名 : 
       1. 原始数据表，数据团队建立的 则 采用命名方式为 ods_dm (original data stream, data_member)
       2. 临时数据表 数据团队建立的 则 采用命名方式为 tmp_dm (temp data stream , data_member)
@@ -85,9 +85,9 @@ drwxr-xr-x   8 blair  staff   256B Dec 15 14:04 util
 + 2). 配置文件 (conf目录下)
 
    ```
-   default.conf􏰂 配置公共参数, 程序路径, hadoop 用户等
+   default.conf 配置公共参数, 程序路径, hadoop 用户等
    vars.conf    配置任务参数, hive表名, 参数设置, 以及其他变量等
-   alert.conf􏰂   配置邮件报警接收人
+   alert.conf   配置邮件报警接收人
 ```
         
 + 3). 输入输出

@@ -1,0 +1,929 @@
+insert_no_partition_stg_tables.sh: line 29: no partition: command not found
+2018-12-21 13:45:56 SELECT
+              *
+            FROM reportpublic.ods_os_shop_loan_purpose
+  	    WHERE $CONDITIONS
+2018-12-21 13:45:56 start import from jdbc_table...
+2018-12-21 13:45:56 /bin/hadoop fs -rm -r /ext_dc//stg_reportpublic/ods_os_shop_loan_purpose
+18/12/21 13:45:57 INFO fs.TrashPolicyDefault: Moved: 'hdfs://cdhmasteragent1:8020/ext_dc/stg_reportpublic/ods_os_shop_loan_purpose' to trash at: hdfs://cdhmasteragent1:8020/user/hdfs/.Trash/Current/ext_dc/stg_reportpublic/ods_os_shop_loan_purpose
+2018-12-21 13:45:58 -split-by SHOP_ID -m 100
+2018-12-21 13:45:58 /ext_dc//stg_reportpublic/ods_os_shop_loan_purpose
+2018-12-21 13:45:58 id: SHOP_ID
+Warning: /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/log4j-slf4j-impl-2.8.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+18/12/21 13:46:01 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7-cdh6.0.1
+18/12/21 13:46:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/12/21 13:46:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/12/21 13:46:01 INFO tool.CodeGenTool: Beginning code generation
+Fri Dec 21 13:46:01 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:46:02 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM reportpublic.ods_os_shop_loan_purpose
+  	    WHERE  (1 = 0) 
+18/12/21 13:46:02 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM reportpublic.ods_os_shop_loan_purpose
+  	    WHERE  (1 = 0) 
+18/12/21 13:46:02 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM reportpublic.ods_os_shop_loan_purpose
+  	    WHERE  (1 = 0) 
+18/12/21 13:46:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../hadoop-mapreduce
+18/12/21 13:46:03 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hdfs/compile/f217e9aab9528f8e89cc54e45442a5b3/QueryResult.jar
+18/12/21 13:46:03 INFO mapreduce.ImportJobBase: Beginning query import.
+18/12/21 13:46:04 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/12/21 13:46:04 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/12/21 13:46:04 INFO client.RMProxy: Connecting to ResourceManager at cdhserver2/58.59.18.61:8032
+18/12/21 13:46:05 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /user/hdfs/.staging/job_1543889197952_1568
+Fri Dec 21 13:46:06 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:46:06 INFO db.DBInputFormat: Using read commited transaction isolation
+18/12/21 13:46:06 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(SHOP_ID), MAX(SHOP_ID) FROM (SELECT
+              *
+            FROM reportpublic.ods_os_shop_loan_purpose
+  	    WHERE  (1 = 1) ) AS t1
+18/12/21 13:46:06 WARN db.TextSplitter: Generating splits for a textual index column.
+18/12/21 13:46:06 WARN db.TextSplitter: If your database sorts in a case-insensitive order, this may result in a partial import or duplicate records.
+18/12/21 13:46:06 WARN db.TextSplitter: You are strongly encouraged to choose an integral split column.
+18/12/21 13:46:06 INFO mapreduce.JobSubmitter: number of splits:1
+18/12/21 13:46:06 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+18/12/21 13:46:06 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1543889197952_1568
+18/12/21 13:46:06 INFO mapreduce.JobSubmitter: Executing with tokens: []
+18/12/21 13:46:06 INFO conf.Configuration: resource-types.xml not found
+18/12/21 13:46:06 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+18/12/21 13:46:06 INFO impl.YarnClientImpl: Submitted application application_1543889197952_1568
+18/12/21 13:46:06 INFO mapreduce.Job: The url to track the job: http://cdhserver2:8088/proxy/application_1543889197952_1568/
+18/12/21 13:46:06 INFO mapreduce.Job: Running job: job_1543889197952_1568
+18/12/21 13:47:33 INFO mapreduce.Job: Job job_1543889197952_1568 running in uber mode : false
+18/12/21 13:47:33 INFO mapreduce.Job:  map 0% reduce 0%
+18/12/21 13:47:39 INFO mapreduce.Job:  map 100% reduce 0%
+18/12/21 13:47:40 INFO mapreduce.Job: Job job_1543889197952_1568 completed successfully
+18/12/21 13:47:40 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=237296
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=109
+		HDFS: Number of bytes written=0
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Other local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=4202
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=4202
+		Total vcore-milliseconds taken by all map tasks=4202
+		Total megabyte-milliseconds taken by all map tasks=4302848
+	Map-Reduce Framework
+		Map input records=0
+		Map output records=0
+		Input split bytes=109
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=64
+		CPU time spent (ms)=1670
+		Physical memory (bytes) snapshot=251252736
+		Virtual memory (bytes) snapshot=2592460800
+		Total committed heap usage (bytes)=234356736
+		Peak Map Physical memory (bytes)=251252736
+		Peak Map Virtual memory (bytes)=2592460800
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=0
+18/12/21 13:47:40 INFO mapreduce.ImportJobBase: Transferred 0 bytes in 95.9441 seconds (0 bytes/sec)
+18/12/21 13:47:40 INFO mapreduce.ImportJobBase: Retrieved 0 records.
+2018-12-21 13:47:40 Last shell sentence or jobTask run successful!
+2018-12-21 13:47:41 end successful import /ext_dc//stg_reportpublic/ods_os_shop_loan_purpose. field.delim : \001
+2018-12-21 13:47:41 Last shell sentence or jobTask run successful!
+2018-12-21 13:47:42 SELECT
+              *
+            FROM reportpublic.dim_loan_purpose
+  	    WHERE $CONDITIONS
+2018-12-21 13:47:42 start import from jdbc_table...
+2018-12-21 13:47:42 /bin/hadoop fs -rm -r /ext_dc//stg_reportpublic/dim_loan_purpose
+18/12/21 13:47:44 INFO fs.TrashPolicyDefault: Moved: 'hdfs://cdhmasteragent1:8020/ext_dc/stg_reportpublic/dim_loan_purpose' to trash at: hdfs://cdhmasteragent1:8020/user/hdfs/.Trash/Current/ext_dc/stg_reportpublic/dim_loan_purpose
+2018-12-21 13:47:44 -split-by LOAN_PURPOSE -m 100
+2018-12-21 13:47:44 /ext_dc//stg_reportpublic/dim_loan_purpose
+2018-12-21 13:47:44 id: LOAN_PURPOSE
+Warning: /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/log4j-slf4j-impl-2.8.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+18/12/21 13:47:48 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7-cdh6.0.1
+18/12/21 13:47:48 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/12/21 13:47:48 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/12/21 13:47:48 INFO tool.CodeGenTool: Beginning code generation
+Fri Dec 21 13:47:48 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:47:48 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM reportpublic.dim_loan_purpose
+  	    WHERE  (1 = 0) 
+18/12/21 13:47:48 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM reportpublic.dim_loan_purpose
+  	    WHERE  (1 = 0) 
+18/12/21 13:47:48 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM reportpublic.dim_loan_purpose
+  	    WHERE  (1 = 0) 
+18/12/21 13:47:48 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../hadoop-mapreduce
+18/12/21 13:47:50 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hdfs/compile/8392efc5806131d8e1ca9b676f9f776a/QueryResult.jar
+18/12/21 13:47:50 INFO mapreduce.ImportJobBase: Beginning query import.
+18/12/21 13:47:50 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/12/21 13:47:51 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/12/21 13:47:51 INFO client.RMProxy: Connecting to ResourceManager at cdhserver2/58.59.18.61:8032
+18/12/21 13:47:51 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /user/hdfs/.staging/job_1543889197952_1569
+Fri Dec 21 13:47:52 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:47:52 INFO db.DBInputFormat: Using read commited transaction isolation
+18/12/21 13:47:52 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(LOAN_PURPOSE), MAX(LOAN_PURPOSE) FROM (SELECT
+              *
+            FROM reportpublic.dim_loan_purpose
+  	    WHERE  (1 = 1) ) AS t1
+18/12/21 13:47:52 WARN db.TextSplitter: Generating splits for a textual index column.
+18/12/21 13:47:52 WARN db.TextSplitter: If your database sorts in a case-insensitive order, this may result in a partial import or duplicate records.
+18/12/21 13:47:52 WARN db.TextSplitter: You are strongly encouraged to choose an integral split column.
+18/12/21 13:47:52 INFO mapreduce.JobSubmitter: number of splits:20
+18/12/21 13:47:52 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+18/12/21 13:47:53 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1543889197952_1569
+18/12/21 13:47:53 INFO mapreduce.JobSubmitter: Executing with tokens: []
+18/12/21 13:47:53 INFO conf.Configuration: resource-types.xml not found
+18/12/21 13:47:53 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+18/12/21 13:47:53 INFO impl.YarnClientImpl: Submitted application application_1543889197952_1569
+18/12/21 13:47:53 INFO mapreduce.Job: The url to track the job: http://cdhserver2:8088/proxy/application_1543889197952_1569/
+18/12/21 13:47:53 INFO mapreduce.Job: Running job: job_1543889197952_1569
+18/12/21 13:48:00 INFO mapreduce.Job: Job job_1543889197952_1569 running in uber mode : false
+18/12/21 13:48:00 INFO mapreduce.Job:  map 0% reduce 0%
+18/12/21 13:48:05 INFO mapreduce.Job:  map 5% reduce 0%
+18/12/21 13:48:10 INFO mapreduce.Job:  map 10% reduce 0%
+18/12/21 13:48:14 INFO mapreduce.Job:  map 15% reduce 0%
+18/12/21 13:48:18 INFO mapreduce.Job:  map 20% reduce 0%
+18/12/21 13:48:22 INFO mapreduce.Job:  map 25% reduce 0%
+18/12/21 13:48:26 INFO mapreduce.Job:  map 30% reduce 0%
+18/12/21 13:48:30 INFO mapreduce.Job:  map 35% reduce 0%
+18/12/21 13:48:34 INFO mapreduce.Job:  map 40% reduce 0%
+18/12/21 13:48:38 INFO mapreduce.Job:  map 45% reduce 0%
+18/12/21 13:48:42 INFO mapreduce.Job:  map 50% reduce 0%
+18/12/21 13:48:46 INFO mapreduce.Job:  map 55% reduce 0%
+18/12/21 13:48:50 INFO mapreduce.Job:  map 60% reduce 0%
+18/12/21 13:48:54 INFO mapreduce.Job:  map 65% reduce 0%
+18/12/21 13:48:58 INFO mapreduce.Job:  map 70% reduce 0%
+18/12/21 13:49:02 INFO mapreduce.Job:  map 75% reduce 0%
+18/12/21 13:49:06 INFO mapreduce.Job:  map 80% reduce 0%
+18/12/21 13:49:10 INFO mapreduce.Job:  map 85% reduce 0%
+18/12/21 13:49:14 INFO mapreduce.Job:  map 90% reduce 0%
+18/12/21 13:49:18 INFO mapreduce.Job:  map 95% reduce 0%
+18/12/21 13:49:22 INFO mapreduce.Job:  map 100% reduce 0%
+18/12/21 13:49:22 INFO mapreduce.Job: Job job_1543889197952_1569 completed successfully
+18/12/21 13:49:22 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4745550
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=3007
+		HDFS: Number of bytes written=171
+		HDFS: Number of read operations=120
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Other local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=56351
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=56351
+		Total vcore-milliseconds taken by all map tasks=56351
+		Total megabyte-milliseconds taken by all map tasks=57703424
+	Map-Reduce Framework
+		Map input records=13
+		Map output records=13
+		Input split bytes=3007
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=1075
+		CPU time spent (ms)=35770
+		Physical memory (bytes) snapshot=4885794816
+		Virtual memory (bytes) snapshot=51827081216
+		Total committed heap usage (bytes)=4561829888
+		Peak Map Physical memory (bytes)=254681088
+		Peak Map Virtual memory (bytes)=2593132544
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=171
+18/12/21 13:49:22 INFO mapreduce.ImportJobBase: Transferred 171 bytes in 91.7639 seconds (1.8635 bytes/sec)
+18/12/21 13:49:22 INFO mapreduce.ImportJobBase: Retrieved 13 records.
+2018-12-21 13:49:23 Last shell sentence or jobTask run successful!
+2018-12-21 13:49:24 end successful import /ext_dc//stg_reportpublic/dim_loan_purpose. field.delim : \001
+2018-12-21 13:49:24 Last shell sentence or jobTask run successful!
+2018-12-21 13:49:25 SELECT
+              *
+            FROM reportpublic.tmp_smy_prepay_invoice
+  	    WHERE $CONDITIONS
+2018-12-21 13:49:25 start import from jdbc_table...
+2018-12-21 13:49:25 /bin/hadoop fs -rm -r /ext_dc//stg_reportpublic/tmp_smy_prepay_invoice
+18/12/21 13:49:26 INFO fs.TrashPolicyDefault: Moved: 'hdfs://cdhmasteragent1:8020/ext_dc/stg_reportpublic/tmp_smy_prepay_invoice' to trash at: hdfs://cdhmasteragent1:8020/user/hdfs/.Trash/Current/ext_dc/stg_reportpublic/tmp_smy_prepay_invoice
+2018-12-21 13:49:27 -split-by loan_invoice_id -m 100
+2018-12-21 13:49:27 /ext_dc//stg_reportpublic/tmp_smy_prepay_invoice
+2018-12-21 13:49:27 id: loan_invoice_id
+Warning: /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/log4j-slf4j-impl-2.8.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+18/12/21 13:49:30 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7-cdh6.0.1
+18/12/21 13:49:30 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/12/21 13:49:30 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/12/21 13:49:30 INFO tool.CodeGenTool: Beginning code generation
+Fri Dec 21 13:49:30 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:49:31 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM reportpublic.tmp_smy_prepay_invoice
+  	    WHERE  (1 = 0) 
+18/12/21 13:49:31 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM reportpublic.tmp_smy_prepay_invoice
+  	    WHERE  (1 = 0) 
+18/12/21 13:49:31 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM reportpublic.tmp_smy_prepay_invoice
+  	    WHERE  (1 = 0) 
+18/12/21 13:49:31 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../hadoop-mapreduce
+18/12/21 13:49:32 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hdfs/compile/48318577ab336332e380a534bfb6f462/QueryResult.jar
+18/12/21 13:49:32 INFO mapreduce.ImportJobBase: Beginning query import.
+18/12/21 13:49:32 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/12/21 13:49:33 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/12/21 13:49:33 INFO client.RMProxy: Connecting to ResourceManager at cdhserver2/58.59.18.61:8032
+18/12/21 13:49:33 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /user/hdfs/.staging/job_1543889197952_1570
+Fri Dec 21 13:49:35 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:49:35 INFO db.DBInputFormat: Using read commited transaction isolation
+18/12/21 13:49:35 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(loan_invoice_id), MAX(loan_invoice_id) FROM (SELECT
+              *
+            FROM reportpublic.tmp_smy_prepay_invoice
+  	    WHERE  (1 = 1) ) AS t1
+18/12/21 13:49:35 WARN db.TextSplitter: Generating splits for a textual index column.
+18/12/21 13:49:35 WARN db.TextSplitter: If your database sorts in a case-insensitive order, this may result in a partial import or duplicate records.
+18/12/21 13:49:35 WARN db.TextSplitter: You are strongly encouraged to choose an integral split column.
+18/12/21 13:49:35 INFO mapreduce.JobSubmitter: number of splits:20
+18/12/21 13:49:35 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+18/12/21 13:49:35 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1543889197952_1570
+18/12/21 13:49:35 INFO mapreduce.JobSubmitter: Executing with tokens: []
+18/12/21 13:49:35 INFO conf.Configuration: resource-types.xml not found
+18/12/21 13:49:35 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+18/12/21 13:49:35 INFO impl.YarnClientImpl: Submitted application application_1543889197952_1570
+18/12/21 13:49:35 INFO mapreduce.Job: The url to track the job: http://cdhserver2:8088/proxy/application_1543889197952_1570/
+18/12/21 13:49:35 INFO mapreduce.Job: Running job: job_1543889197952_1570
+18/12/21 13:49:43 INFO mapreduce.Job: Job job_1543889197952_1570 running in uber mode : false
+18/12/21 13:49:43 INFO mapreduce.Job:  map 0% reduce 0%
+18/12/21 13:49:48 INFO mapreduce.Job:  map 5% reduce 0%
+18/12/21 13:49:52 INFO mapreduce.Job:  map 10% reduce 0%
+18/12/21 13:49:56 INFO mapreduce.Job:  map 15% reduce 0%
+18/12/21 13:50:00 INFO mapreduce.Job:  map 20% reduce 0%
+18/12/21 13:50:04 INFO mapreduce.Job:  map 25% reduce 0%
+18/12/21 13:50:08 INFO mapreduce.Job:  map 30% reduce 0%
+18/12/21 13:50:12 INFO mapreduce.Job:  map 35% reduce 0%
+18/12/21 13:50:16 INFO mapreduce.Job:  map 40% reduce 0%
+18/12/21 13:50:21 INFO mapreduce.Job:  map 45% reduce 0%
+18/12/21 13:50:25 INFO mapreduce.Job:  map 50% reduce 0%
+18/12/21 13:50:29 INFO mapreduce.Job:  map 55% reduce 0%
+18/12/21 13:50:33 INFO mapreduce.Job:  map 60% reduce 0%
+18/12/21 13:50:37 INFO mapreduce.Job:  map 65% reduce 0%
+18/12/21 13:50:41 INFO mapreduce.Job:  map 70% reduce 0%
+18/12/21 13:50:45 INFO mapreduce.Job:  map 75% reduce 0%
+18/12/21 13:50:49 INFO mapreduce.Job:  map 80% reduce 0%
+18/12/21 13:50:53 INFO mapreduce.Job:  map 85% reduce 0%
+18/12/21 13:50:57 INFO mapreduce.Job:  map 90% reduce 0%
+18/12/21 13:51:01 INFO mapreduce.Job:  map 95% reduce 0%
+18/12/21 13:51:05 INFO mapreduce.Job:  map 100% reduce 0%
+18/12/21 13:51:05 INFO mapreduce.Job: Job job_1543889197952_1570 completed successfully
+18/12/21 13:51:05 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4746390
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=3689
+		HDFS: Number of bytes written=37240
+		HDFS: Number of read operations=120
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Other local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=57015
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=57015
+		Total vcore-milliseconds taken by all map tasks=57015
+		Total megabyte-milliseconds taken by all map tasks=58383360
+	Map-Reduce Framework
+		Map input records=1862
+		Map output records=1862
+		Input split bytes=3689
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=1180
+		CPU time spent (ms)=35710
+		Physical memory (bytes) snapshot=4962799616
+		Virtual memory (bytes) snapshot=51835850752
+		Total committed heap usage (bytes)=4607442944
+		Peak Map Physical memory (bytes)=254287872
+		Peak Map Virtual memory (bytes)=2592698368
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=37240
+18/12/21 13:51:05 INFO mapreduce.ImportJobBase: Transferred 36.3672 KB in 92.2153 seconds (403.8376 bytes/sec)
+18/12/21 13:51:05 INFO mapreduce.ImportJobBase: Retrieved 1862 records.
+2018-12-21 13:51:06 Last shell sentence or jobTask run successful!
+2018-12-21 13:51:07 end successful import /ext_dc//stg_reportpublic/tmp_smy_prepay_invoice. field.delim : \001
+2018-12-21 13:51:07 Last shell sentence or jobTask run successful!
+2018-12-21 13:51:08 SELECT
+              *
+            FROM reportpublic.ods_asset_service_fee_final
+  	    WHERE $CONDITIONS
+2018-12-21 13:51:08 start import from jdbc_table...
+2018-12-21 13:51:08 /bin/hadoop fs -rm -r /ext_dc//stg_reportpublic/ods_asset_service_fee_final
+18/12/21 13:51:09 INFO fs.TrashPolicyDefault: Moved: 'hdfs://cdhmasteragent1:8020/ext_dc/stg_reportpublic/ods_asset_service_fee_final' to trash at: hdfs://cdhmasteragent1:8020/user/hdfs/.Trash/Current/ext_dc/stg_reportpublic/ods_asset_service_fee_final
+2018-12-21 13:51:09 -split-by product_id -m 100
+2018-12-21 13:51:09 /ext_dc//stg_reportpublic/ods_asset_service_fee_final
+2018-12-21 13:51:09 id: product_id
+Warning: /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/log4j-slf4j-impl-2.8.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+18/12/21 13:51:13 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7-cdh6.0.1
+18/12/21 13:51:13 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/12/21 13:51:13 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/12/21 13:51:13 INFO tool.CodeGenTool: Beginning code generation
+Fri Dec 21 13:51:13 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:51:13 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM reportpublic.ods_asset_service_fee_final
+  	    WHERE  (1 = 0) 
+18/12/21 13:51:13 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM reportpublic.ods_asset_service_fee_final
+  	    WHERE  (1 = 0) 
+18/12/21 13:51:13 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM reportpublic.ods_asset_service_fee_final
+  	    WHERE  (1 = 0) 
+18/12/21 13:51:13 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../hadoop-mapreduce
+18/12/21 13:51:15 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hdfs/compile/78128c36900bf117732cb5f4c82b8f67/QueryResult.jar
+18/12/21 13:51:15 INFO mapreduce.ImportJobBase: Beginning query import.
+18/12/21 13:51:15 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/12/21 13:51:16 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/12/21 13:51:16 INFO client.RMProxy: Connecting to ResourceManager at cdhserver2/58.59.18.61:8032
+18/12/21 13:51:16 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /user/hdfs/.staging/job_1543889197952_1571
+Fri Dec 21 13:51:18 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:51:18 INFO db.DBInputFormat: Using read commited transaction isolation
+18/12/21 13:51:18 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(product_id), MAX(product_id) FROM (SELECT
+              *
+            FROM reportpublic.ods_asset_service_fee_final
+  	    WHERE  (1 = 1) ) AS t1
+18/12/21 13:51:18 WARN db.TextSplitter: Generating splits for a textual index column.
+18/12/21 13:51:18 WARN db.TextSplitter: If your database sorts in a case-insensitive order, this may result in a partial import or duplicate records.
+18/12/21 13:51:18 WARN db.TextSplitter: You are strongly encouraged to choose an integral split column.
+18/12/21 13:51:18 INFO mapreduce.JobSubmitter: number of splits:20
+18/12/21 13:51:18 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+18/12/21 13:51:18 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1543889197952_1571
+18/12/21 13:51:18 INFO mapreduce.JobSubmitter: Executing with tokens: []
+18/12/21 13:51:18 INFO conf.Configuration: resource-types.xml not found
+18/12/21 13:51:18 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+18/12/21 13:51:18 INFO impl.YarnClientImpl: Submitted application application_1543889197952_1571
+18/12/21 13:51:18 INFO mapreduce.Job: The url to track the job: http://cdhserver2:8088/proxy/application_1543889197952_1571/
+18/12/21 13:51:18 INFO mapreduce.Job: Running job: job_1543889197952_1571
+18/12/21 13:51:25 INFO mapreduce.Job: Job job_1543889197952_1571 running in uber mode : false
+18/12/21 13:51:25 INFO mapreduce.Job:  map 0% reduce 0%
+18/12/21 13:51:32 INFO mapreduce.Job:  map 10% reduce 0%
+18/12/21 13:51:33 INFO mapreduce.Job:  map 20% reduce 0%
+18/12/21 13:51:34 INFO mapreduce.Job:  map 45% reduce 0%
+18/12/21 13:51:35 INFO mapreduce.Job:  map 50% reduce 0%
+18/12/21 13:51:37 INFO mapreduce.Job:  map 60% reduce 0%
+18/12/21 13:51:38 INFO mapreduce.Job:  map 75% reduce 0%
+18/12/21 13:51:39 INFO mapreduce.Job:  map 80% reduce 0%
+18/12/21 13:51:41 INFO mapreduce.Job:  map 90% reduce 0%
+18/12/21 13:51:42 INFO mapreduce.Job:  map 100% reduce 0%
+18/12/21 13:51:42 INFO mapreduce.Job: Job job_1543889197952_1571 completed successfully
+18/12/21 13:51:42 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4746490
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=3301
+		HDFS: Number of bytes written=917
+		HDFS: Number of read operations=120
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Other local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=105394
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=105394
+		Total vcore-milliseconds taken by all map tasks=105394
+		Total megabyte-milliseconds taken by all map tasks=107923456
+	Map-Reduce Framework
+		Map input records=18
+		Map output records=18
+		Input split bytes=3301
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=2789
+		CPU time spent (ms)=33640
+		Physical memory (bytes) snapshot=4672630784
+		Virtual memory (bytes) snapshot=51858771968
+		Total committed heap usage (bytes)=4413456384
+		Peak Map Physical memory (bytes)=261259264
+		Peak Map Virtual memory (bytes)=2599407616
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=917
+18/12/21 13:51:42 INFO mapreduce.ImportJobBase: Transferred 917 bytes in 26.0554 seconds (35.1942 bytes/sec)
+18/12/21 13:51:42 INFO mapreduce.ImportJobBase: Retrieved 18 records.
+2018-12-21 13:51:42 Last shell sentence or jobTask run successful!
+2018-12-21 13:51:43 end successful import /ext_dc//stg_reportpublic/ods_asset_service_fee_final. field.delim : \001
+2018-12-21 13:51:43 Last shell sentence or jobTask run successful!
+2018-12-21 13:51:44 SELECT
+              *
+            FROM channel.baidu_loan_rate
+  	    WHERE $CONDITIONS
+2018-12-21 13:51:44 start import from jdbc_table...
+2018-12-21 13:51:44 /bin/hadoop fs -rm -r /ext_dc//stg_channel/baidu_loan_rate
+18/12/21 13:51:46 INFO fs.TrashPolicyDefault: Moved: 'hdfs://cdhmasteragent1:8020/ext_dc/stg_channel/baidu_loan_rate' to trash at: hdfs://cdhmasteragent1:8020/user/hdfs/.Trash/Current/ext_dc/stg_channel/baidu_loan_rate
+2018-12-21 13:51:47 -split-by CUR_DATE -m 100
+2018-12-21 13:51:47 /ext_dc//stg_channel/baidu_loan_rate
+2018-12-21 13:51:47 id: CUR_DATE
+Warning: /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/log4j-slf4j-impl-2.8.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+18/12/21 13:51:50 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7-cdh6.0.1
+18/12/21 13:51:50 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/12/21 13:51:50 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/12/21 13:51:50 INFO tool.CodeGenTool: Beginning code generation
+Fri Dec 21 13:51:50 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:51:50 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM channel.baidu_loan_rate
+  	    WHERE  (1 = 0) 
+18/12/21 13:51:50 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM channel.baidu_loan_rate
+  	    WHERE  (1 = 0) 
+18/12/21 13:51:50 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM channel.baidu_loan_rate
+  	    WHERE  (1 = 0) 
+18/12/21 13:51:50 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../hadoop-mapreduce
+18/12/21 13:51:52 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hdfs/compile/c5be45cca62be8a6ba2926f15b750cad/QueryResult.jar
+18/12/21 13:51:53 INFO mapreduce.ImportJobBase: Beginning query import.
+18/12/21 13:51:53 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/12/21 13:51:53 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/12/21 13:51:53 INFO client.RMProxy: Connecting to ResourceManager at cdhserver2/58.59.18.61:8032
+18/12/21 13:51:54 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /user/hdfs/.staging/job_1543889197952_1573
+Fri Dec 21 13:51:55 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:51:55 INFO db.DBInputFormat: Using read commited transaction isolation
+18/12/21 13:51:55 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(CUR_DATE), MAX(CUR_DATE) FROM (SELECT
+              *
+            FROM channel.baidu_loan_rate
+  	    WHERE  (1 = 1) ) AS t1
+18/12/21 13:51:56 WARN db.TextSplitter: Generating splits for a textual index column.
+18/12/21 13:51:56 WARN db.TextSplitter: If your database sorts in a case-insensitive order, this may result in a partial import or duplicate records.
+18/12/21 13:51:56 WARN db.TextSplitter: You are strongly encouraged to choose an integral split column.
+18/12/21 13:51:56 INFO mapreduce.JobSubmitter: number of splits:20
+18/12/21 13:51:56 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+18/12/21 13:51:56 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1543889197952_1573
+18/12/21 13:51:56 INFO mapreduce.JobSubmitter: Executing with tokens: []
+18/12/21 13:51:56 INFO conf.Configuration: resource-types.xml not found
+18/12/21 13:51:56 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+18/12/21 13:51:56 INFO impl.YarnClientImpl: Submitted application application_1543889197952_1573
+18/12/21 13:51:56 INFO mapreduce.Job: The url to track the job: http://cdhserver2:8088/proxy/application_1543889197952_1573/
+18/12/21 13:51:56 INFO mapreduce.Job: Running job: job_1543889197952_1573
+18/12/21 13:52:02 INFO mapreduce.Job: Job job_1543889197952_1573 running in uber mode : false
+18/12/21 13:52:02 INFO mapreduce.Job:  map 0% reduce 0%
+18/12/21 13:52:10 INFO mapreduce.Job:  map 10% reduce 0%
+18/12/21 13:52:11 INFO mapreduce.Job:  map 30% reduce 0%
+18/12/21 13:52:13 INFO mapreduce.Job:  map 55% reduce 0%
+18/12/21 13:52:17 INFO mapreduce.Job:  map 65% reduce 0%
+18/12/21 13:52:19 INFO mapreduce.Job:  map 90% reduce 0%
+18/12/21 13:52:20 INFO mapreduce.Job:  map 100% reduce 0%
+18/12/21 13:52:20 INFO mapreduce.Job: Job job_1543889197952_1573 completed successfully
+18/12/21 13:52:20 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4744630
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=3055
+		HDFS: Number of bytes written=17203615
+		HDFS: Number of read operations=120
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Other local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=116876
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=116876
+		Total vcore-milliseconds taken by all map tasks=116876
+		Total megabyte-milliseconds taken by all map tasks=119681024
+	Map-Reduce Framework
+		Map input records=152533
+		Map output records=152533
+		Input split bytes=3055
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=3410
+		CPU time spent (ms)=39480
+		Physical memory (bytes) snapshot=4990689280
+		Virtual memory (bytes) snapshot=51860815872
+		Total committed heap usage (bytes)=4665114624
+		Peak Map Physical memory (bytes)=408678400
+		Peak Map Virtual memory (bytes)=2602053632
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=17203615
+18/12/21 13:52:20 INFO mapreduce.ImportJobBase: Transferred 16.4066 MB in 26.5295 seconds (633.2722 KB/sec)
+18/12/21 13:52:20 INFO mapreduce.ImportJobBase: Retrieved 152533 records.
+2018-12-21 13:52:20 Last shell sentence or jobTask run successful!
+2018-12-21 13:52:21 end successful import /ext_dc//stg_channel/baidu_loan_rate. field.delim : \001
+2018-12-21 13:52:21 Last shell sentence or jobTask run successful!
+2018-12-21 13:52:22 SELECT
+              *
+            FROM loanflow.flow_biz_apply
+  	    WHERE $CONDITIONS
+2018-12-21 13:52:22 start import from jdbc_table...
+2018-12-21 13:52:22 /bin/hadoop fs -rm -r /ext_dc//stg_loanflow/flow_biz_apply
+18/12/21 13:52:24 INFO fs.TrashPolicyDefault: Moved: 'hdfs://cdhmasteragent1:8020/ext_dc/stg_loanflow/flow_biz_apply' to trash at: hdfs://cdhmasteragent1:8020/user/hdfs/.Trash/Current/ext_dc/stg_loanflow/flow_biz_apply
+2018-12-21 13:52:24 -split-by id -m 100
+2018-12-21 13:52:24 /ext_dc//stg_loanflow/flow_biz_apply
+2018-12-21 13:52:24 id: id
+Warning: /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/log4j-slf4j-impl-2.8.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+18/12/21 13:52:27 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7-cdh6.0.1
+18/12/21 13:52:27 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/12/21 13:52:27 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/12/21 13:52:27 INFO tool.CodeGenTool: Beginning code generation
+Fri Dec 21 13:52:28 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:52:28 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM loanflow.flow_biz_apply
+  	    WHERE  (1 = 0) 
+18/12/21 13:52:28 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM loanflow.flow_biz_apply
+  	    WHERE  (1 = 0) 
+18/12/21 13:52:28 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM loanflow.flow_biz_apply
+  	    WHERE  (1 = 0) 
+18/12/21 13:52:28 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../hadoop-mapreduce
+18/12/21 13:52:31 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hdfs/compile/73a5b5e84746a06cfcbd416c4bb662d8/QueryResult.jar
+18/12/21 13:52:31 INFO mapreduce.ImportJobBase: Beginning query import.
+18/12/21 13:52:31 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/12/21 13:52:31 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/12/21 13:52:31 INFO client.RMProxy: Connecting to ResourceManager at cdhserver2/58.59.18.61:8032
+18/12/21 13:52:32 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /user/hdfs/.staging/job_1543889197952_1574
+Fri Dec 21 13:52:33 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:52:33 INFO db.DBInputFormat: Using read commited transaction isolation
+18/12/21 13:52:33 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(id), MAX(id) FROM (SELECT
+              *
+            FROM loanflow.flow_biz_apply
+  	    WHERE  (1 = 1) ) AS t1
+18/12/21 13:52:33 INFO db.IntegerSplitter: Split size: 3802; Num splits: 20 from: 2585 to: 78626
+18/12/21 13:52:33 INFO mapreduce.JobSubmitter: number of splits:20
+18/12/21 13:52:33 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+18/12/21 13:52:33 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1543889197952_1574
+18/12/21 13:52:33 INFO mapreduce.JobSubmitter: Executing with tokens: []
+18/12/21 13:52:34 INFO conf.Configuration: resource-types.xml not found
+18/12/21 13:52:34 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+18/12/21 13:52:34 INFO impl.YarnClientImpl: Submitted application application_1543889197952_1574
+18/12/21 13:52:34 INFO mapreduce.Job: The url to track the job: http://cdhserver2:8088/proxy/application_1543889197952_1574/
+18/12/21 13:52:34 INFO mapreduce.Job: Running job: job_1543889197952_1574
+18/12/21 13:52:57 INFO mapreduce.Job: Job job_1543889197952_1574 running in uber mode : false
+18/12/21 13:52:57 INFO mapreduce.Job:  map 0% reduce 0%
+18/12/21 13:53:03 INFO mapreduce.Job:  map 5% reduce 0%
+18/12/21 13:53:08 INFO mapreduce.Job:  map 10% reduce 0%
+18/12/21 13:53:12 INFO mapreduce.Job:  map 15% reduce 0%
+18/12/21 13:53:18 INFO mapreduce.Job:  map 20% reduce 0%
+18/12/21 13:53:20 INFO mapreduce.Job:  map 30% reduce 0%
+18/12/21 13:53:21 INFO mapreduce.Job:  map 35% reduce 0%
+18/12/21 13:53:22 INFO mapreduce.Job:  map 45% reduce 0%
+18/12/21 13:53:23 INFO mapreduce.Job:  map 60% reduce 0%
+18/12/21 13:53:24 INFO mapreduce.Job:  map 65% reduce 0%
+18/12/21 13:53:25 INFO mapreduce.Job:  map 70% reduce 0%
+18/12/21 13:53:26 INFO mapreduce.Job:  map 75% reduce 0%
+18/12/21 13:53:27 INFO mapreduce.Job:  map 95% reduce 0%
+18/12/21 13:53:28 INFO mapreduce.Job:  map 100% reduce 0%
+18/12/21 13:53:28 INFO mapreduce.Job: Job job_1543889197952_1574 completed successfully
+18/12/21 13:53:28 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4744150
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1998
+		HDFS: Number of bytes written=40643036
+		HDFS: Number of read operations=120
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Other local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=118706
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=118706
+		Total vcore-milliseconds taken by all map tasks=118706
+		Total megabyte-milliseconds taken by all map tasks=121554944
+	Map-Reduce Framework
+		Map input records=63290
+		Map output records=63290
+		Input split bytes=1998
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=3119
+		CPU time spent (ms)=66790
+		Physical memory (bytes) snapshot=5606809600
+		Virtual memory (bytes) snapshot=51939569664
+		Total committed heap usage (bytes)=6253707264
+		Peak Map Physical memory (bytes)=295731200
+		Peak Map Virtual memory (bytes)=2601340928
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=40643036
+18/12/21 13:53:28 INFO mapreduce.ImportJobBase: Transferred 38.7602 MB in 57.182 seconds (694.1071 KB/sec)
+18/12/21 13:53:28 INFO mapreduce.ImportJobBase: Retrieved 63290 records.
+2018-12-21 13:53:29 Last shell sentence or jobTask run successful!
+2018-12-21 13:53:30 end successful import /ext_dc//stg_loanflow/flow_biz_apply. field.delim : \001
+2018-12-21 13:53:30 Last shell sentence or jobTask run successful!
+2018-12-21 13:53:31 SELECT
+              *
+            FROM product.product_product_param
+  	    WHERE $CONDITIONS
+2018-12-21 13:53:31 start import from jdbc_table...
+2018-12-21 13:53:31 /bin/hadoop fs -rm -r /ext_dc//stg_product/product_product_param
+18/12/21 13:53:33 INFO fs.TrashPolicyDefault: Moved: 'hdfs://cdhmasteragent1:8020/ext_dc/stg_product/product_product_param' to trash at: hdfs://cdhmasteragent1:8020/user/hdfs/.Trash/Current/ext_dc/stg_product/product_product_param
+2018-12-21 13:53:33 -split-by PRODUCT_ID -m 100
+2018-12-21 13:53:33 /ext_dc//stg_product/product_product_param
+2018-12-21 13:53:33 id: PRODUCT_ID
+Warning: /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/log4j-slf4j-impl-2.8.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+18/12/21 13:53:37 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7-cdh6.0.1
+18/12/21 13:53:37 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/12/21 13:53:37 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/12/21 13:53:37 INFO tool.CodeGenTool: Beginning code generation
+Fri Dec 21 13:53:38 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:53:38 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM product.product_product_param
+  	    WHERE  (1 = 0) 
+18/12/21 13:53:38 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM product.product_product_param
+  	    WHERE  (1 = 0) 
+18/12/21 13:53:38 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM product.product_product_param
+  	    WHERE  (1 = 0) 
+18/12/21 13:53:38 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../hadoop-mapreduce
+18/12/21 13:53:40 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hdfs/compile/9123fcf31a6ff7b71b8097201295465a/QueryResult.jar
+18/12/21 13:53:40 INFO mapreduce.ImportJobBase: Beginning query import.
+18/12/21 13:53:40 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/12/21 13:53:41 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/12/21 13:53:41 INFO client.RMProxy: Connecting to ResourceManager at cdhserver2/58.59.18.61:8032
+18/12/21 13:53:42 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /user/hdfs/.staging/job_1543889197952_1577
+Fri Dec 21 13:53:43 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:53:43 INFO db.DBInputFormat: Using read commited transaction isolation
+18/12/21 13:53:43 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(PRODUCT_ID), MAX(PRODUCT_ID) FROM (SELECT
+              *
+            FROM product.product_product_param
+  	    WHERE  (1 = 1) ) AS t1
+18/12/21 13:53:43 WARN db.TextSplitter: Generating splits for a textual index column.
+18/12/21 13:53:43 WARN db.TextSplitter: If your database sorts in a case-insensitive order, this may result in a partial import or duplicate records.
+18/12/21 13:53:43 WARN db.TextSplitter: You are strongly encouraged to choose an integral split column.
+18/12/21 13:53:44 INFO mapreduce.JobSubmitter: number of splits:20
+18/12/21 13:53:44 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+18/12/21 13:53:44 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1543889197952_1577
+18/12/21 13:53:44 INFO mapreduce.JobSubmitter: Executing with tokens: []
+18/12/21 13:53:44 INFO conf.Configuration: resource-types.xml not found
+18/12/21 13:53:44 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+18/12/21 13:53:44 INFO impl.YarnClientImpl: Submitted application application_1543889197952_1577
+18/12/21 13:53:44 INFO mapreduce.Job: The url to track the job: http://cdhserver2:8088/proxy/application_1543889197952_1577/
+18/12/21 13:53:44 INFO mapreduce.Job: Running job: job_1543889197952_1577
+18/12/21 13:53:50 INFO mapreduce.Job: Job job_1543889197952_1577 running in uber mode : false
+18/12/21 13:53:50 INFO mapreduce.Job:  map 0% reduce 0%
+18/12/21 13:53:56 INFO mapreduce.Job:  map 10% reduce 0%
+18/12/21 13:53:59 INFO mapreduce.Job:  map 30% reduce 0%
+18/12/21 13:54:00 INFO mapreduce.Job:  map 35% reduce 0%
+18/12/21 13:54:01 INFO mapreduce.Job:  map 55% reduce 0%
+18/12/21 13:54:02 INFO mapreduce.Job:  map 60% reduce 0%
+18/12/21 13:54:04 INFO mapreduce.Job:  map 65% reduce 0%
+18/12/21 13:54:05 INFO mapreduce.Job:  map 70% reduce 0%
+18/12/21 13:54:06 INFO mapreduce.Job:  map 90% reduce 0%
+18/12/21 13:54:07 INFO mapreduce.Job:  map 100% reduce 0%
+18/12/21 13:54:07 INFO mapreduce.Job: Job job_1543889197952_1577 completed successfully
+18/12/21 13:54:08 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4745390
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=3285
+		HDFS: Number of bytes written=500029
+		HDFS: Number of read operations=120
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Other local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=113547
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=113547
+		Total vcore-milliseconds taken by all map tasks=113547
+		Total megabyte-milliseconds taken by all map tasks=116272128
+	Map-Reduce Framework
+		Map input records=3807
+		Map output records=3807
+		Input split bytes=3285
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=3123
+		CPU time spent (ms)=35220
+		Physical memory (bytes) snapshot=4793544704
+		Virtual memory (bytes) snapshot=51835166720
+		Total committed heap usage (bytes)=4452777984
+		Peak Map Physical memory (bytes)=274792448
+		Peak Map Virtual memory (bytes)=2595602432
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=500029
+18/12/21 13:54:08 INFO mapreduce.ImportJobBase: Transferred 488.3096 KB in 26.5965 seconds (18.3599 KB/sec)
+18/12/21 13:54:08 INFO mapreduce.ImportJobBase: Retrieved 3807 records.
+2018-12-21 13:54:08 Last shell sentence or jobTask run successful!
+2018-12-21 13:54:09 end successful import /ext_dc//stg_product/product_product_param. field.delim : \001
+2018-12-21 13:54:09 Last shell sentence or jobTask run successful!
+2018-12-21 13:54:10 SELECT
+              *
+            FROM credittrans.credit_loan_invoice_apply
+  	    WHERE $CONDITIONS
+2018-12-21 13:54:10 start import from jdbc_table...
+2018-12-21 13:54:10 /bin/hadoop fs -rm -r /ext_dc//stg_credittrans/credit_loan_invoice_apply
+18/12/21 13:54:13 INFO fs.TrashPolicyDefault: Moved: 'hdfs://cdhmasteragent1:8020/ext_dc/stg_credittrans/credit_loan_invoice_apply' to trash at: hdfs://cdhmasteragent1:8020/user/hdfs/.Trash/Current/ext_dc/stg_credittrans/credit_loan_invoice_apply
+2018-12-21 13:54:14 -split-by LOAN_APPLY_ID -m 100
+2018-12-21 13:54:14 /ext_dc//stg_credittrans/credit_loan_invoice_apply
+2018-12-21 13:54:14 id: LOAN_APPLY_ID
+Warning: /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/jars/log4j-slf4j-impl-2.8.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+18/12/21 13:54:17 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7-cdh6.0.1
+18/12/21 13:54:17 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+18/12/21 13:54:17 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+18/12/21 13:54:17 INFO tool.CodeGenTool: Beginning code generation
+Fri Dec 21 13:54:17 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:54:18 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM credittrans.credit_loan_invoice_apply
+  	    WHERE  (1 = 0) 
+18/12/21 13:54:18 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM credittrans.credit_loan_invoice_apply
+  	    WHERE  (1 = 0) 
+18/12/21 13:54:18 INFO manager.SqlManager: Executing SQL statement: SELECT
+              *
+            FROM credittrans.credit_loan_invoice_apply
+  	    WHERE  (1 = 0) 
+18/12/21 13:54:18 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /opt/cloudera/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678/bin/../lib/sqoop/../hadoop-mapreduce
+18/12/21 13:54:20 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-hdfs/compile/ce137d6d8dd545bb882aa50ee0a12ff9/QueryResult.jar
+18/12/21 13:54:20 INFO mapreduce.ImportJobBase: Beginning query import.
+18/12/21 13:54:20 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+18/12/21 13:54:21 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+18/12/21 13:54:21 INFO client.RMProxy: Connecting to ResourceManager at cdhserver2/58.59.18.61:8032
+18/12/21 13:54:21 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /user/hdfs/.staging/job_1543889197952_1578
+Fri Dec 21 13:54:24 CST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+18/12/21 13:54:24 INFO db.DBInputFormat: Using read commited transaction isolation
+18/12/21 13:54:24 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(LOAN_APPLY_ID), MAX(LOAN_APPLY_ID) FROM (SELECT
+              *
+            FROM credittrans.credit_loan_invoice_apply
+  	    WHERE  (1 = 1) ) AS t1
+18/12/21 13:54:24 WARN db.TextSplitter: Generating splits for a textual index column.
+18/12/21 13:54:24 WARN db.TextSplitter: If your database sorts in a case-insensitive order, this may result in a partial import or duplicate records.
+18/12/21 13:54:24 WARN db.TextSplitter: You are strongly encouraged to choose an integral split column.
+18/12/21 13:54:24 INFO mapreduce.JobSubmitter: number of splits:22
+18/12/21 13:54:24 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+18/12/21 13:54:24 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1543889197952_1578
+18/12/21 13:54:24 INFO mapreduce.JobSubmitter: Executing with tokens: []
+18/12/21 13:54:24 INFO conf.Configuration: resource-types.xml not found
+18/12/21 13:54:24 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+18/12/21 13:54:24 INFO impl.YarnClientImpl: Submitted application application_1543889197952_1578
+18/12/21 13:54:24 INFO mapreduce.Job: The url to track the job: http://cdhserver2:8088/proxy/application_1543889197952_1578/
+18/12/21 13:54:24 INFO mapreduce.Job: Running job: job_1543889197952_1578
+18/12/21 13:54:53 INFO mapreduce.Job: Job job_1543889197952_1578 running in uber mode : false
+18/12/21 13:54:53 INFO mapreduce.Job:  map 0% reduce 0%
+18/12/21 13:54:58 INFO mapreduce.Job:  map 5% reduce 0%
+18/12/21 13:55:24 INFO mapreduce.Job:  map 9% reduce 0%
+18/12/21 13:55:25 INFO mapreduce.Job:  map 14% reduce 0%
+18/12/21 13:55:26 INFO mapreduce.Job:  map 18% reduce 0%
+18/12/21 13:55:27 INFO mapreduce.Job:  map 27% reduce 0%
+18/12/21 13:55:28 INFO mapreduce.Job:  map 45% reduce 0%
+18/12/21 13:55:30 INFO mapreduce.Job:  map 55% reduce 0%
+18/12/21 13:55:31 INFO mapreduce.Job:  map 59% reduce 0%
+18/12/21 13:55:33 INFO mapreduce.Job:  map 68% reduce 0%
+18/12/21 13:55:34 INFO mapreduce.Job:  map 73% reduce 0%
+18/12/21 13:55:35 INFO mapreduce.Job:  map 95% reduce 0%
+18/12/21 13:56:01 INFO mapreduce.Job:  map 100% reduce 0%
+18/12/21 13:56:01 INFO mapreduce.Job: Job job_1543889197952_1578 completed successfully
+18/12/21 13:56:01 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=5221074
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=3634
+		HDFS: Number of bytes written=507924237
+		HDFS: Number of read operations=132
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=44
+	Job Counters 
+		Launched map tasks=22
+		Other local map tasks=22
+		Total time spent by all maps in occupied slots (ms)=175562
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=175562
+		Total vcore-milliseconds taken by all map tasks=175562
+		Total megabyte-milliseconds taken by all map tasks=179775488
+	Map-Reduce Framework
+		Map input records=1417354
+		Map output records=1417354
+		Input split bytes=3634
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=3799
+		CPU time spent (ms)=86290
+		Physical memory (bytes) snapshot=5611712512
+		Virtual memory (bytes) snapshot=57048629248
+		Total committed heap usage (bytes)=5217189888
+		Peak Map Physical memory (bytes)=440623104
+		Peak Map Virtual memory (bytes)=2598465536
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=507924237
+18/12/21 13:56:01 INFO mapreduce.ImportJobBase: Transferred 484.3943 MB in 100.5086 seconds (4.8194 MB/sec)
+18/12/21 13:56:01 INFO mapreduce.ImportJobBase: Retrieved 1417354 records.
+2018-12-21 13:56:01 Last shell sentence or jobTask run successful!
+2018-12-21 13:56:02 end successful import /ext_dc//stg_credittrans/credit_loan_invoice_apply. field.delim : \001
+2018-12-21 13:56:02 Last shell sentence or jobTask run successful!

@@ -7,7 +7,7 @@ table_name="${table_ods_e_coupon}"
 hql="create external table if not exists ${table_name}
 (
     id bigint COMMENT '序号',
-    x_card_user_id varchar(50) COMMENT 'x卡的用户id',
+    x_card_user_id varchar(50) COMMENT '卡的用户id',
     coupon_discount_code varchar(50) COMMENT '电子券核销码',
     coupon_verify_code varchar(50) COMMENT '电子券核销单号',
     mobile_number varchar(16) COMMENT '领取电子券的手机号',

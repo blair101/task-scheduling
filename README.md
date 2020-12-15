@@ -48,7 +48,7 @@ drwxr-xr-x   8 blair  staff   256B Dec 15 14:04 util
 ── log | 日志文件  (如脚本失败可根据log追查定位失败原因) |
 ── script | 主脚本文件 |
 ── util | 工具脚本 (主要包含写log脚本, hadoop file / local file / hive check 等封装, 初始化环境目录等)
-|
+&nbsp; | &nbsp;
 ── jar | jar包 (如无则不需要建立)
 ── java | udf, udaf 源代码 (如无则不需要建立)
 
@@ -171,7 +171,7 @@ total 144
 - 编写 crontab_job 下你的调度脚本
 - 仿照 crontab\_job\_ods\_e\_coupon.sh 编写你主脚本对应的 调度脚本
 
-### 3.6 Linux crontab Or Airflow
+### 3.6 Linux crontab or Airflow
 
 在 linux crontab 中，增加需要定时启动的你的调度脚本 crontab\_job\_your\_script.sh
 

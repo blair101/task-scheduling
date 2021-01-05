@@ -1,5 +1,7 @@
 # Flexible Task Scheduling Microframework
 
+[检测依赖封装的函数](https://github.com/blair101/task-scheduling/blob/master/util/static_hive_lib)
+
 ## 目标
 
 + 1. 提供一些 best practice
